@@ -45,6 +45,8 @@ High-level layout of the todo app built with React, TypeScript, Vite, and Tailwi
     ├── App.tsx
     ├── index.css
     ├── App.css 
+    |__pages
+    |   |_Todo.tsx
     ├── types
     │   └── todo.ts
     ├── hooks
