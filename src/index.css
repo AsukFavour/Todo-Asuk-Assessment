@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  /* Light mode colors (default) */
+  --color-veryDarkBlue: hsl(0, 0%, 98%);
+  --color-veryDarkDesaturatedBlue: hsl(0, 0%, 100%);
+  --color-lightGrayishBlue: hsl(235, 19%, 35%);
+  --color-lightGrayishBlueHover: hsl(235, 19%, 35%);
+  --color-darkGrayishBlue: hsl(236, 9%, 61%);
+  --color-veryDarkGrayishBlue: hsl(235, 19%, 35%);
+  --color-veryDarkGrayishBlue2: hsl(237, 14%, 26%);
+  --color-primary: hsl(220, 98%, 61%);
+  
+  /* Shadows */
+  --shadow-card: 0 35px 50px rgba(194, 195, 214, 0.5);
+  --shadow-card-dark: 0 35px 50px rgba(0, 0, 0, 0.5);
+  
+  font-family: 'Josefin Sans', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+}
+
+/* Dark mode colors */
+:root.dark {
+  --color-veryDarkBlue: hsl(235, 21%, 11%);
+  --color-veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --color-lightGrayishBlue: hsl(234, 39%, 85%);
+  --color-lightGrayishBlueHover: hsl(236, 33%, 92%);
+  --color-darkGrayishBlue: hsl(234, 11%, 52%);
+  --color-veryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --color-primary: hsl(220, 98%, 61%);
+}
+
+@theme {
+  --color-veryDarkBlue: var(--color-veryDarkBlue);
+  --color-veryDarkDesaturatedBlue: var(--color-veryDarkDesaturatedBlue);
+  --color-lightGrayishBlue: var(--color-lightGrayishBlue);
+  --color-lightGrayishBlueHover: var(--color-lightGrayishBlueHover);
+  --color-darkGrayishBlue: var(--color-darkGrayishBlue);
+  --color-veryDarkGrayishBlue: var(--color-veryDarkGrayishBlue);
+  --color-veryDarkGrayishBlue2: var(--color-veryDarkGrayishBlue2);
+  --color-primary: var(--color-primary);
+  
+  --shadow-card: var(--shadow-card);
+  --shadow-card-dark: var(--shadow-card-dark);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Hero background images */
+.bg-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./assets/images/bg-mobile-light.jpg');
+}
+
+:root.dark .bg-hero {
+  background-image: url('./assets/images/bg-mobile-dark.jpg');
+}
+
+@media (min-width: 768px) {
+  .bg-hero {
+    background-image: url('./assets/images/bg-desktop-light.jpg');
+  }
+
+  :root.dark .bg-hero {
+    background-image: url('./assets/images/bg-desktop-dark.jpg');
+  }
+}
+
+/* Custom gradient */
+@utility bg-gradient-check {
+  background-image: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-grayish-blue);
+  border-radius: 9999px;
+}
