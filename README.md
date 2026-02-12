@@ -103,6 +103,32 @@ High-level layout of the todo app built with React, TypeScript, Vite, and Tailwi
 - **TodoFilters.tsx**: Filter controls (`All`, `Active`, `Completed`) rendered both inside the list footer for desktop and in a separate bar beneath the list on mobile, as shown in the designs.
 - **TodoFooter.tsx**: Bottom section inside the list card with “X items left”, inline filters (desktop), “Clear Completed”, and matches the dark, subtle text styling .
 
+State Management
+
+Custom hooks over external libraries for simplicity and control
+useTodos: Manages all todo CRUD operations and filtering logic
+useTheme: Handles theme persistence and DOM class toggling
+useLocalStorage: Generic reusable hook for localStorage sync
+
+Styling Strategy
+
+Tailwind CSS v4 for utility-first styling with CSS variables
+Custom color system using HSL values for precise color control
+Dark mode implemented via CSS custom properties that swap on .dark class
+Mobile-first responsive design with breakpoints
+
+Performance Optimizations
+
+Efficient re-renders by keeping state close to where it's used
+LocalStorage debouncing through effect hooks
+Minimal component re-renders with proper key usage
+
+Drag and Drop
+
+Custom implementation using hello-pangea/dnd
+Visual feedback with opacity changes during drag
+State updates only on successful drop to prevent glitches
+
 ### Getting started
 To run locally 
 -npm i / npm install
