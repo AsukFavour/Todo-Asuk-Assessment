@@ -33,7 +33,6 @@ High-level layout of the todo app built with React, TypeScript, Vite, and Tailwi
 ├── tsconfig.node.json
 ├── vite.config.ts
 ├── README.md
-├── STRUCTURE.md   
 ├── public
 │   └── images
 │       ├── bg-desktop-dark.jpg
@@ -69,12 +68,10 @@ High-level layout of the todo app built with React, TypeScript, Vite, and Tailwi
 
 - **index.html**: Root HTML file with `#root` mount point and main script.
 - **vite.config.ts**: Vite configuration with React plugin.
-- **tailwind.config.js / postcss.config.js**: Tailwind CSS and PostCSS setup.
 - **tsconfig\*.json**: TypeScript configuration for app and tooling.
 - **README.md**: Challenge description, setup, and implementation notes.
-- **STRUCTURE.md**: This overview of project layout and responsibilities.
 
-#### `public/images/`
+#### `assests/images/`
 
 - **bg-desktop-dark.jpg / bg-desktop-light.jpg**: Desktop hero background images used for the top half of the screen.
 - **bg-mobile-dark.jpg / bg-mobile-light.jpg**: Mobile hero background images used for the top half of the screen.
@@ -104,6 +101,10 @@ High-level layout of the todo app built with React, TypeScript, Vite, and Tailwi
 - **TodoItem.tsx**: Single todo row (circle/checked state on the left, text in the center, `X` delete on the right) styled to match the typography and spacing from the images.
 - **TodoFilters.tsx**: Filter controls (`All`, `Active`, `Completed`) rendered both inside the list footer for desktop and in a separate bar beneath the list on mobile, as shown in the designs.
 - **TodoFooter.tsx**: Bottom section inside the list card with “X items left”, inline filters (desktop), “Clear Completed”, and matches the dark, subtle text styling .
+
+#### "pages/Todo.tsx"
+
+- **Todo.tsx**. Singular page to encapsulate all the required component
 
 State Management
 
